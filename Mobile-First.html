@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Tag FUNDAMENTAL para que o design responsivo funcione no celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu GOAT site: (Arthur Mota)</title>
+  <style>
+    /* ======================================================
+       1. ESTILOS BASE / MOBILE (Padrão para telas pequenas)
+       ====================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      /* Fundo com um tom quentinho e uma textura de pontos muito sutil */
+      background-color: #f7f7f5;
+      background-image: radial-gradient(#e2e2df 0.85px, transparent 0.85px);
+      background-size: 18px 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header empilhado no mobile */
+    .header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 3px solid #1abc9c;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+    }
+
+    /* A tag <nav> define um conjunto de links de navegação. */
+    .nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 0.8rem;
+      background-color: #34495e;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .nav a:hover {
+      background-color: #1abc9c;
+      color: #fff;
+    }
+
+    /* Container principal e Cards em coluna única no mobile */
+    .container {
+      padding: 1.5rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      /* Borda sutil e sombra leve para dar destaque humano ao card */
+      border: 1px solid #e0e0dc;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin-bottom: 1.2rem;
+      color: #555;
+    }
+
+    .card a {
+      display: inline-block;
+      text-align: center;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .card a:hover {
+      background-color: #1abc9c;
+    }
+
+    /* ======================================================
+       2. TABLETS E TELAS MÉDIAS (A partir de 600px)
+       ====================================================== */
+    @media (min-width: 600px) {
+      .nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+      }
+
+      .nav a {
+        background-color: transparent;
+      }
+
+      .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1 1 calc(50% - 0.75rem);
+      }
+    }
+
+    /* ======================================================
+       3. DESKTOPS E TELAS GRANDES (A partir de 900px)
+       ====================================================== */
+    @media (min-width: 900px) {
+      .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .card {
+        flex: 1 1 calc(25% - 1.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Meu GOAT site: <b>(Arthur Mota)</b></div>
+    <nav class="nav">
+      <a href="#">Início</a>
+      <a href="https://kiwik03-star.github.io/linkAutoBiogr-fia/">Autobiografia</a>
+      <a href="https://kiwik03-star.github.io/linkMySnakeGame/">Joguinho da Cobra</a>
+      <a href="https://kiwik03-star.github.io/MinhaTabela_Filmes/">Tabela Filmes</a>
+      <a href="https://kiwik03-star.github.io/MinhaSinopse/">Sinopse</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <article class="card">
+        <div>
+          <h2>Autobiografia</h2>
+          <p>Informações sobre mim, meus gostos, esportes, pets e objetivos.</p>
+        </div>
+        <a href="https://kiwik03-star.github.io/linkAutoBiogr-fia/">Abrir</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <h2>Joguinho da Cobra</h2>
+          <p>Sobre o jogo Snake, regras, como jogar e curiosidades.</p>
+        </div>
+        <a href="https://kiwik03-star.github.io/linkMySnakeGame/">Abrir</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <h2>Tabela Filmes</h2>
+          <p>Minha tabela com filmes, gêneros, anos de lançamento e capas.</p>
+        </div>
+        <a href="https://kiwik03-star.github.io/MinhaTabela_Filmes/">Abrir</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <h2>Sinopse Ping Pong Summer</h2>
+          <p>Sinopse do filme, temas principais e relação com a Educação Física.</p>
+        </div>
+        <a href="https://kiwik03-star.github.io/MinhaSinopse/">Abrir</a>
+      </article>
+    </section>
+  </main>
+
+</body>
+</html>
